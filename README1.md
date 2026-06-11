@@ -60,6 +60,99 @@ x23 (Ecoinvent Procesos) ─────────> df_pf1_pr (Crushing e Insu
 
 ```
 
+### Data Architecture & Workflow
+
+
+```mermaid
+graph LR
+    %% Group 1: Core Trade & Supply Chain
+    subgraph 1. Trade & Supply Chain Inputs
+        x1[x1: Trase Raw Data]
+        x2[x2: Spatial Units]
+        x4[x4: Comex Municipal Exports]
+        x5[x5: Destination Country IDs]
+        x6[x6: Brazil Crushing Balance]
+    end
+
+    %% Group 2: Agricultural & Economic Variables
+    subgraph 2. Farm & Econ Inputs
+        x3[x3: Double Cropping Data]
+        x7[x7: Oil & Meal Prices]
+    end
+
+    %% Group 3: Geo & Environmental
+    subgraph 3. Spatial & Env. Inputs
+        x8_14[x8 to x14: Geo Rasters & Shapefiles]
+        x15_22[x15, x22: Biodiversity CFs]
+    end
+
+    %% Group 4: Life Cycle & Transport
+    subgraph 4. LCI & Logistics
+        x16_18[x16 to x18: Farming LCI]
+        x19_21[x19 to x21: Transport Distances]
+        x23[x23: Ecoinvent Processes]
+    end
+
+    %% Intermediate Nodes
+    df_trase[df_trase: Consolidated Trade Matrix]
+    df_LULUC[LULUC Area & Emission Matrices]
+    df_bgp[df_bgp: Stochastic Characterization Factors]
+    df_LCI[df_LCI: Farming Inventories]
+    df_dis[df_dis1: Distance Logistics]
+    df_pf1[df_pf1_pr: Crushing Energy/Water]
+
+    %% Routing to Intermediates
+    x1 & x2 & x4 & x5 & x6 --> df_trase
+    x3 -->|Yield & Occupation| df_trase
+    x7 -->|Economic Allocation| df_trase
+    
+    x8_14 --> df_LULUC
+    x15_22 --> df_bgp
+    x16_18 --> df_LCI
+    x19_21 --> df_dis
+    x23 --> df_pf1
+
+    %% The Master Node
+    df_sch1((df_sch1: Stochastic<br>Master Matrix))
+
+    %% Assembly
+    df_trase --> df_sch1
+    df_LULUC --> df_sch1
+    df_bgp --> df_sch1
+    df_LCI --> df_sch1
+    df_dis --> df_sch1
+    df_pf1 --> df_sch1
+
+    %% Final Output Split
+    subgraph Final Impact Outputs
+        df_sch1 -->|Aggregated Soy Equivalent| O1[df_sch_soy_eq]
+        df_sch1 -->|Unprocessed Whole Grain| O2[df_soybean]
+        df_sch1 -->|Direct Bean Meal| O3[df_meal]
+        df_sch1 -->|Press-cake Meal + Econ Allocation| O4[df_cake]
+        df_sch1 -->|Crude Soy Oil + Econ Allocation| O5[df_oil]
+    end
+    
+    %% Styling
+    style df_sch1 fill:#2C3E50,stroke:#F39C12,stroke-width:4px,color:#fff
+    style O1 fill:#27AE60,stroke:#fff,color:#fff
+    style O2 fill:#2980B9,stroke:#fff,color:#fff
+    style O3 fill:#2980B9,stroke:#fff,color:#fff
+    style O4 fill:#8E44AD,stroke:#fff,color:#fff
+    style O5 fill:#8E44AD,stroke:#fff,color:#fff
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
