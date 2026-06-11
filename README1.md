@@ -32,7 +32,7 @@ soy-biodiversity-impact-model/
     ├── trase_db_imputed_expanded.parquet
     ├── sLULUC_em.parquet                # Final emissions matrix
     └── ... (simulation outputs)
-    
+ ```   
 
 # Estimating Biodiversity Loss Impacts of the Brazilian Soy International Supply Chain: Code and Data Repository
 ## Overview
