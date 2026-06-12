@@ -1,3 +1,14 @@
+================================================================================
+DOCUMENTATION: BIODIVERSITY FOOTPRINT OF BRAZILIAN SOY EXPORTS
+================================================================================
+
+PROJECT TITLE: [Insert Your Paper Title Here]
+TARGET JOURNAL: Nature [or specific journal name]
+VERSION: 1.0.0
+CONTACT: [Your Name] ([Your Email])
+ZENODO DOI: [Insert DOI Link]
+
+
 # Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
 
 ## Overview
@@ -7,23 +18,6 @@ Due to the massive scale of the geospatial layers, the Monte Carlo simulations, 
 * **GitHub Repository (This site):** Hosts the complete core R code, project logical structures (`.Rproj`), and technical documentation.
 * **Zenodo Repository (Data Core):** Hosts the heavy structural datasets, including raw input layers, intermediate checkpoints, and final simulation outputs.
 
-# Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
-
-## Overview
-This repository contains the official R implementation and data architecture for estimating the biodiversity loss impacts associated with the international trade of Brazilian soy. Utilizing an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterization factors to quantify biodiversity loss as a linear function of activities across the soy supply chain.
-
-Due to the massive scale of the geospatial layers, the extensive Monte Carlo simulations, and the highly data-intensive nature of this life cycle assessment, the complete project infrastructure encompasses **34.9 GB of curated data**. 
-
----
-
-## Data Architecture, Comprehensive Reproducibility & Storage Constraints
-The complete analytical infrastructure of this project relies on high-resolution, wall-to-wall annual geospatial layers (including Land Cover, Soil Organic Carbon, and Burned Area rasters) spanning from 2004 to 2022. Due to the multi-temporal and national scale of these datasets, the raw data volume drastically exceeds both the hosting thresholds of GitHub and the standard distribution capacities of public scientific repositories.
-
-To ensure strict compliance with open science principles without compromising system limitations, this project follows a decoupled, **three-tiered hybrid data-sharing architecture**:
-
-1. **Code Repository (GitHub - This site):** Contains all version-controlled R scripts, custom computational functions, technical documentation, and the RStudio project framework (`.Rproj`).
-2. **Reproducibility Dataset (Zenodo - Data Core):** Hosts a fully optimized data subset designed for pipeline testing. This includes all structural tabular databases, shapefiles, intermediate checkpoints, final simulation outputs, and the exact spatial raster layers required to successfully execute and validate the pipeline for the default target year and filtered municipality.
-3. **Comprehensive Historical Core Dataset:** The complete, uncompressed multi-terabyte historical raster series (2004–2022) used to generate the paper's full-scale national results is securely stored in our institutional repository and is fully available upon request to the corresponding author.
 
 ---
 
