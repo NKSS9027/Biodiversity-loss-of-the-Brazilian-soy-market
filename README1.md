@@ -1,7 +1,7 @@
 # Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
 
 ## Overview
-This repository contains the official R implementation and data architecture for estimating the biodiversity loss impacts associated with the international trade of Brazilian soy. Utilizing an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterization factors to quantify biodiversity degradation as a linear function of localized land-use activities across the soy supply chain.
+This repository contains the official R implementation and data architecture for estimating the biodiversity loss impacts associated with the international trade of Brazilian soy. Utilizing an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterization factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
 
 Due to the massive, multi-temporal scale of the geospatial assets, the extensive Monte Carlo simulations, and the data-intensive nature inherent to comprehensive LCAs, the complete raw historical infrastructure of this project encompasses a multi-terabyte data volume that far exceeds both the hosting thresholds of GitHub and the standard distribution capacities of public repositories like Zenodo.
 
