@@ -1,21 +1,21 @@
 # Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
 
 ## Overview
-This repository contains the official R implementation and data architecture for estimating the biodiversity loss impacts associated with the international trade of Brazilian soy. Utilizing an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterization factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
+This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
 
-Due to the massive, multi-temporal scale of the geospatial assets, the extensive Monte Carlo simulations, and the data-intensive nature inherent to comprehensive LCAs, the complete raw historical infrastructure of this project encompasses a multi-terabyte data volume that far exceeds both the hosting thresholds of GitHub and the standard distribution capacities of public repositories like Zenodo.
+Due to the multi-temporal scale of the high-resolution geospatial layers, the extensive Monte Carlo simulations, and the data-intensive nature inherent to comprehensive LCAs, the complete raw infrastructure of this project encompasses a multi-terabyte data volume that far exceeds both the hosting thresholds of GitHub and the standard distribution capacities of public repositories like Zenodo.
 
 ---
 
 ## Data Architecture, Comprehensive Reproducibility & Storage Constraints
-The complete analytical model spans an operational timeline from **2004 to 2022**, relying on wall-to-wall annual geospatial layers (including Land Cover, Soil Organic Carbon, and Burned Area rasters) that require historical baselines stretching from **2001 to 2022**. 
+The complete analytical model spans an operational timeline from **2004 to 2022**, relying on wall-to-wall annual geospatial layers (including Land Cover, Soil Organic Carbon, and Burned Area rasters) that require  baselines stretching from **2001 to 2022**. 
 
-To balance strict compliance with open science principles against these severe storage and system constraints, this repository utilizes a decoupled, **three-tiered hybrid data-sharing architecture**:
+To balance strict compliance with open science principles against these severe storage and system constraints, this repository utilizes a decoupled, **two-tiered hybrid data-sharing architecture**:
 
 1. **Code Repository (GitHub - This site):** Contains all version-controlled R scripts, custom computational functions, technical documentation, and the RStudio project framework (`.Rproj`).
-2. **Reproducibility Dataset (Zenodo - Data Core):** Hosts a fully optimized, lightweight data subset engineered exclusively for code validation and pipeline transparency. It includes all structural tabular databases, shapefiles, intermediate checkpoints, and **only the specific spatial raster layers required to successfully execute and verify the pipeline for the default target year (2019) and the filtered verification municipality**. 
-3. **Comprehensive Historical Core Dataset:** The complete, uncompressed multi-terabyte historical raster series (2001–2022) used to generate the paper's full-scale national results is securely stored in our institutional repository and is fully available upon request to the corresponding author due to its massive physical size.
+2. **Reproducibility Dataset (Zenodo - Data Core):** Hosts a fully optimized, lightweight data subset engineered exclusively for code validation and pipeline transparency. It includes all tabular databases, shapefiles, intermediate checkpoints, and **only the specific spatial raster layers required to successfully execute and verify the pipeline for the default target year (2019) and the filtered verification municipality**. 
 
+This repository serves as the comprehensive supplementary material for the associated scientific publication[cite: XX].
 ---
 
 ## Data Availability & Big Data Workflow
@@ -26,7 +26,7 @@ To fully replicate the analysis or run the scripts, you must combine the code re
 The project relies on strict relative paths managed via the `here` package. When fully assembled, the root directory must mirror the following structure:
 
 ```text
-soy-biodiversity-impact-model/
+soy-biodiversity-loss-model/
 │
 ├── soy-biodiversity-impact-model.Rproj  # RStudio Project core
 ├── main_analysis_model.R                # Primary computation script
@@ -44,7 +44,7 @@ soy-biodiversity-impact-model/
  ```   
 
 ```
-[ARCHIVOS DE ENTRADA]                 [PROCESAMIENTO INTERMEDIO]               [RESULTADOS FINALES]
+[INPUT FILES]                 [INTERMEDIATE PROCESISNG]               [FINAL RESULTS]
                                                                                 
 x1 (Trase Supply Chain) ----------> df_trase (1, 2, 3) Imputaciones 
                                            │
@@ -153,11 +153,10 @@ graph LR
 ```
 
 
-# Estimating Biodiversity Loss Impacts of the Brazilian Soy International Supply Chain: Code and Data Repository
-## Overview
+
 [cite_start]This repository contains the R Studio project, source code, input datasets, and output results for assessing the biodiversity loss impacts driven by the international trade of Brazilian soy[cite: 1]. [cite_start]The evaluation framework is built upon an attributional Life Cycle Assessment (LCA)[cite: 5]. [cite_start]It dynamically links supply chain activity data with spatially explicit characterization factors via linear functions to quantify habitat transformation and occupation impacts[cite: 5]. 
 
-[cite_start]This repository serves as the comprehensive supplementary material for the associated scientific publication[cite: 2].
+
 
 ---
 
