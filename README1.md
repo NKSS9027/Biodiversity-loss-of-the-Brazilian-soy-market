@@ -271,6 +271,9 @@ Uncertainty simulation iterations computing Land-Use Change derived emissions[ci
 ## Supplementary Data Tables (Stored in Zenodo)
 [cite_start]*Note: Any additional Excel files uploaded to the main Zenodo repository alongside this project code are supplementary to the manuscript text[cite: 2]. [cite_start]Every supplementary Excel file includes a dedicated internal sheet detailing variable definitions, units, and methodological context[cite: 204].*
 
+## Contact / Author
+nelsiso@upv.edu.es
+
 ---
 ## License
 This repository is licensed under the **MIT License** for the source code and software scripts, and the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** for the datasets and metadata structures.
