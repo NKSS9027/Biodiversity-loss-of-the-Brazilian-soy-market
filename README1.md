@@ -20,13 +20,9 @@ Reproducibility Dataset (Zenodo): Functions as the core package for workflow val
 
 Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitations or restrictive licensing types, which are necessary to obtain the full comprehensive results of the study, are detailed further below. Specific instructions for accessing and obtaining these files are provided in the description section of each dataset.
 
-La deforestación asociada a la cadena de suministro de la soja ha sido ampliamente documentada [^1]. Para calcular los impactos biofísicos, nos basamos en el marco metodológico del ciclo de vida^[Sintaxis alternativa: también puedes escribir texto corto aquí directamente].
-
-Además, los factores de caracterización espacializados se extrajeron de estudios previos de biodiversidad [^2].
+To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
 </div>
 ---
-
-To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
 
 ### Repository Structure
 The project relies on strict relative paths. When fully assembled, the root directory must mirror the following structure:
@@ -136,29 +132,29 @@ graph LR
 
 | File Identifier | File Name / Path | Description & Source |
 | :--- | :--- | :--- |
-| **Input 1** | `trase_soy_supply_chain.xlsx` | Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. [cite_start]Adapted from Trase[cite: 27, 28, 29, 30, 31]. |
-| **Input 2** | `nd2_nd3_spatial_units.xlsx` | [cite_start]Geographic coordinates of export and import ports[cite: 32, 33]. |
-| **Input 3** | `soy_maize_double_cropping.xlsx` | Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate double-cropping magnitude. [cite_start]Sourced from IBGE-SIDRA[cite: 34, 35, 36]. |
-| **Input 4** | `brazil_municipal_exports_2025.csv` | International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. [cite_start]Sourced from IBGE-COMEX[cite: 37, 38, 39, 40, 41]. |
-| **Input 5** | `destination_countries_id.xlsx` | [cite_start]Identification data for destination countries used for dataframe linkage[cite: 43, 44, 45]. |
-| **Input 6** | `brazil_crushing.xlsx` | Monthly domestic soy commodity commercial balance per municipality (1998–2024). [cite_start]Sourced from ABIOVE[cite: 46, 47, 48]. |
-| **Input 7** | `soy_oil_and_meal_prices.xlsx` | Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. [cite_start]Sourced from ABIOVE[cite: 49, 50, 51]. |
-| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` | [cite_start]Polygon vector layer of Brazilian municipalities for spatial identification[cite: 52, 53]. |
-| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | [cite_start]IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks[cite: 54, 55, 56]. |
-| **Input 10** | `raster/land_cover/land_cover_` | MapBiomas Collection 8 land cover raster (30m). *Note: Due to storage constraints, only 2016 and 2019 are provided for code verification. [cite_start]The full series (2001–2022) is available at MapBiomas*[cite: 57, 58, 59, 60]. |
-| **Input 11** | `raster/soil_organic_carbon_soc/soc_` | Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas*[cite: 61, 62, 63, 64, 65]. |
-| **Input 12** | `raster/burned_area/burned_area_` | Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[cite: 66, 67, 68, 69, 70]. |
-| **Input 13** | `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[cite: 71, 72]. |
-| **Input 14** | `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[cite: 73, 74, 75]. |
-| **Input 15** | `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023) [cite_start][cite: 76, 77, 78]. |
-| **Input 16** | `lci_soy_production.xlsx` | LCA foreground activity data for farming/processing stages compiled from 22 scientific articles (2011–2023)[cite: 79, 80]. |
-| **Input 17** | `on_field_emission_factors.xlsx` | Emission factors for fertilizers/soil amendments (IPCC) and fossil fuel combustion (Sphera)[cite: 81, 82]. |
-| **Input 18** | `n_and_c_content.xlsx` | Nitrogen and Carbon content in fertilizer products and soil amendments[cite: 83, 84]. |
-| **Input 19** | `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[cite: 85, 86, 87]. |
-| **Input 20** | `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[cite: 88, 89, 90]. |
-| **Input 22** | `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[cite: 91, 92]. |
-| **Input 23** | `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterization factors for biodiversity loss linked to emissions[cite: 93, 94, 95]. |
-| **Input 24** | `ecoinvent_unit_processes.xlsx` | Ecoinvent v3.10 unit process indicators (SimaPro). *Values anonymized to `1` for licensing compliance*[cite: 96, 97, 98, 99]. |
+| **Input 1** | `trase_soy_supply_chain.xlsx` | Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. Adapted from Trase [^1]. |
+| **Input 2** | `nd2_nd3_spatial_units.xlsx` |Geographic coordinates of export and import ports[^2]. |
+| **Input 3** | `soy_maize_double_cropping.xlsx` | Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate double-cropping magnitude. Sourced from IBGE-SIDRA[^3]. |
+| **Input 4** | `brazil_municipal_exports_2025.csv` | International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. Sourced from IBGE-COMEX [^4]. |
+| **Input 5** | `destination_countries_id.xlsx` | Identification data for destination countries used for dataframe linkage [^5].|
+| **Input 6** | `brazil_crushing.xlsx` | Monthly domestic soy commodity commercial balance per municipality (1998–2024). Sourced from ABIOVE [^6]. |
+| **Input 7** | `soy_oil_and_meal_prices.xlsx` | Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. Sourced from ABIOVE[^7]. |
+| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |Polygon vector layer of Brazilian municipalities for spatial identification [^8]. |
+| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks [^9]. |
+| **Input 10** | `raster/land_cover/land_cover_` | MapBiomas Collection 8 land cover raster (30m). *Note: Due to storage constraints, only 2016 and 2019 are provided for code verification. The full series (2001–2022) is available at MapBiomas* [^10]. |
+| **Input 11** | `raster/soil_organic_carbon_soc/soc_` | Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas* [^11]. |
+| **Input 12** | `raster/burned_area/burned_area_` | Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^12]. |
+| **Input 13** | `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^13]. |
+| **Input 14** | `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[^3]. |
+| **Input 15** | `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^15]. |
+| **Input 16** | `lci_soy_production.xlsx` | LCA foreground activity data for farming/processing stages compiled from 22 scientific articles (2011–2023)[^16]. |
+| **Input 17** | `on_field_emission_factors.xlsx` | Emission factors for fertilizers/soil amendments (IPCC) and fossil fuel combustion (Sphera)[^17]. |
+| **Input 18** | `n_and_c_content.xlsx` | Nitrogen and Carbon content in fertilizer products and soil amendments[^18]. |
+| **Input 19** | `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. |
+| **Input 20** | `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[^20]. |
+| **Input 22** | `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^21]. |
+| **Input 23** | `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterization factors for biodiversity loss linked to emissions[^22]. |
+| **Input 24** | `ecoinvent_unit_processes.xlsx` | Ecoinvent v3.10 unit process indicators (SimaPro). *Values anonymized to `1` for licensing compliance*[^23]. |
 
 ---
 
@@ -191,23 +187,30 @@ To ensure exact computational reproducibility, the analytical pipeline was execu
 </p>
 
 ### Hardware Architecture
-* [cite_start]**Processor:** Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz [cite: 15]
-* [cite_start]**Installed RAM:** 32.0 GB (31.8 GB usable) [cite: 16]
-* [cite_start]**System Type:** 64-bit Operating System, x64-based processor [cite: 17]
+* **Processor:** Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz
+* **Installed RAM:** 32.0 GB (31.8 GB usable)
+* **System Type:** 64-bit Operating System, x64-based processor
 
-### Software Environment
-* [cite_start]**R Version:** 4.6.0 (2026-04-24 ucrt) [cite: 18]
-* [cite_start]**RStudio Version:** 2026.05.0+218 [cite: 19]
+### Software & Core Dependencies
+* **R Version:** 4.6.0 (2026-04-24 ucrt)
+* **RStudio Version:** 2026.05.0+218
+
+The pipeline relies on the following key libraries, each serving a specific role in our Big Data and geospatial framework:
 
 ### Required R Packages
-| Package | Version | Package | Version |
-| :--- | :--- | :--- | :--- |
-| `openxlsx` | [cite_start]4.2.8.1 [cite: 20] | `dtplyr` | [cite_start]1.3.3 [cite: 21] |
-| `triangle` | [cite_start]1.1.0 [cite: 20] | `raster` | [cite_start]3.6-32 [cite: 21] |
-| `arrow` | [cite_start]23.0.1.2 [cite: 20] | `sp` | [cite_start]2.2-1 [cite: 21] |
-| `rnaturalearthdata` | [cite_start]1.0.0 [cite: 20] | `terra` | [cite_start]1.9-11 [cite: 21] |
-| `sf` | [cite_start]1.1-0 [cite: 20] | `here` | [cite_start]1.0.2 [cite: 21] |
-| `tidyverse` | [cite_start]2.0.0 [cite: 21] | | |
+| Package | Version | 
+| :--- | :--- | 
+| `openxlsx` | 4.2.8.1 | 
+| `dtplyr` |1.3.3 |
+| `triangle` |1.1.0 |
+| `raster` | 3.6-32 |
+| `arrow` |23.0.1.2 |
+`sp` |2.2-1 |
+| `rnaturalearthdata` | 1.0.0 |
+| `terra` | 1.9-11 |
+| `sf` | 1.1-0 |
+|`here` |1.0.2 |
+| `tidyverse` | 2.0.0  | | |
 
 ---
 
@@ -239,5 +242,6 @@ nelsiso@upv.edu.es
 This repository is licensed under the **MIT License** for the source code and software scripts, and the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** for the datasets and metadata structures.
 
 ## References
-[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
-[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
+[^1]: Lathuillière, M. J., Suavet, C., Biddle, H., Su, N., Prada Moro, Y., Carvalho, T., & Ribeiro, V. (2022). Brazil soy supply chain (2004-2022) (Version 2.6) [Data set]. Trase. https://doi.org/10.48650/DCE3-JJ97
+[^2]: SEARATES platform. https://www.searates.com/es/maritime
+[^3]: IBGE-SIDRA. Tabela 1612: Área plantada, área colhida, quantidade produzida, rendimento médio e valor da produção das lavouras temporárias. Sistema IBGE de Recuperação Automática. Instituto Brasileiro de Geografia e Estatística. https://sidra.ibge.gov.br/tabela/1612 (2024).
