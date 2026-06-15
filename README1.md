@@ -8,7 +8,6 @@ This repository contains the R implementation and data architecture for estimati
 <p align="justify">
 This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]
 </p>
----
 
 ## Data Availability and Reproducibility Framework
 <div align="justify">
@@ -132,53 +131,53 @@ graph LR
 
 | File Identifier | File Name / Path | Description & Source |
 | :--- | :--- | :--- |
-| **Input 1** | `trase_soy_supply_chain.xlsx` | Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. Adapted from Trase [^1]. |
+| **Input 1** | `trase_soy_supply_chain.xlsx` | <div align="justify"> Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. Adapted from Trase [^1].</div> |
 | **Input 2** | `nd2_nd3_spatial_units.xlsx` |Geographic coordinates of export and import ports[^2]. |
-| **Input 3** | `soy_maize_double_cropping.xlsx` | Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate double-cropping magnitude. Sourced from IBGE-SIDRA[^3]. |
-| **Input 4** | `brazil_municipal_exports_2025.csv` | International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. Sourced from IBGE-COMEX [^4]. |
-| **Input 5** | `destination_countries_id.xlsx` | Identification data for destination countries used for dataframe linkage [^5].|
-| **Input 6** | `brazil_crushing.xlsx` | Monthly domestic soy commodity commercial balance per municipality (1998–2024). Sourced from ABIOVE [^6]. |
-| **Input 7** | `soy_oil_and_meal_prices.xlsx` | Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. Sourced from ABIOVE[^7]. |
-| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |Polygon vector layer of Brazilian municipalities for spatial identification [^8]. |
-| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks [^9]. |
-| **Input 10** | `raster/land_cover/land_cover_` | MapBiomas Collection 8 land cover raster (30m). *Note: Due to storage constraints, only 2016 and 2019 are provided for code verification. The full series (2001–2022) is available at MapBiomas* [^10]. |
-| **Input 11** | `raster/soil_organic_carbon_soc/soc_` | Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas* [^11]. |
-| **Input 12** | `raster/burned_area/burned_area_` | Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^12]. |
-| **Input 13** | `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^13]. |
-| **Input 14** | `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[^3]. |
-| **Input 15** | `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^15]. |
-| **Input 16** | `lci_soy_production.xlsx` | LCA foreground activity data for farming/processing stages compiled from 22 scientific articles (2011–2023)[^16]. |
-| **Input 17** | `on_field_emission_factors.xlsx` | Emission factors for fertilizers/soil amendments (IPCC) and fossil fuel combustion (Sphera)[^17]. |
-| **Input 18** | `n_and_c_content.xlsx` | Nitrogen and Carbon content in fertilizer products and soil amendments[^18]. |
-| **Input 19** | `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. |
-| **Input 20** | `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[^20]. |
-| **Input 22** | `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^21]. |
-| **Input 23** | `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterization factors for biodiversity loss linked to emissions[^22]. |
-| **Input 24** | `ecoinvent_unit_processes.xlsx` | Ecoinvent v3.10 unit process indicators (SimaPro). *Values anonymized to `1` for licensing compliance*[^23]. |
+| **Input 3** | `soy_maize_double_cropping.xlsx` |<div align="justify">  Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate double-cropping magnitude. Sourced from IBGE-SIDRA[^3]. </div>|
+| **Input 4** | `brazil_municipal_exports_2025.csv` | <div align="justify"> International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. Sourced from IBGE-COMEX [^4].</div> |
+| **Input 5** | `destination_countries_id.xlsx` | <div align="justify"> Identification data for destination countries used for dataframe linkage [^5].</div>|
+| **Input 6** | `brazil_crushing.xlsx` | <div align="justify"> Monthly domestic soy commodity commercial balance per municipality (1998–2024). Sourced from ABIOVE [^6]. </div>|
+| **Input 7** | `soy_oil_and_meal_prices.xlsx` | <div align="justify"> Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. Sourced from ABIOVE[^6].</div> |
+| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |<div align="justify"> Polygon vector layer of Brazilian municipalities for spatial identification [^7]. </div>|
+| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | <div align="justify"> IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks [^8].</div> |
+| **Input 10** | `raster/land_cover/land_cover_` |<div align="justify">  MapBiomas Collection 8 land cover raster (30m). *Note: Due to storage constraints, only 2016 and 2019 are provided for code verification. The full series (2001–2022) is available at MapBiomas* [^9].</div>|
+| **Input 11** | `raster/soil_organic_carbon_soc/soc_` | <div align="justify"> Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas* [^10].</div> |
+| **Input 12** | `raster/burned_area/burned_area_` |<div align="justify">  Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^11].</div> |
+| **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^12].</div> |
+| **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[^13][^14].</div> |
+| **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^15]. </div>|
+| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming/processing stages compiled from 22 scientific articles (2011–2023)[^16].</div> |
+| **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilizers/soil amendments (IPCC) and fossil fuel combustion (Sphera)[^17]. </div>|
+| **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and Carbon content in fertilizer products and soil amendments[^18]. </div>|
+| **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. </div>|
+| **Input 20** |<div align="justify">  `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[^20].</div> |
+| **Input 22** |<div align="justify">  `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^21]. </div>|
+| **Input 23** |<div align="justify">  `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterization factors for biodiversity loss linked to emissions[^22].</div> |
+| **Input 24** |<div align="justify">  `ecoinvent_unit_processes.xlsx` | Ecoinvent v3.10 unit process indicators (SimaPro). *Values anonymized to `1` for licensing compliance*[^23].</div> |
 
 ---
 
 ## Data Dictionary: Output Files (`output_data/`)
 
-### Output 1: `trase_db_imputed_expanded.parquet` [cite: 101]
-Imputed Trase database expanded with double-cropping practices and individualized soy commodity market splits[cite: 102, 103].
-* [cite_start]**Location/Routing:** `export_port_code` [cite: 112][cite_start], `export_port_name_mo` (reassigned ports for logical transoceanic shipping) [cite: 113, 114, 115][cite_start], `port_municipality_code` [cite: 116][cite_start], `municipality_code` [cite: 123][cite_start], `import_country_name` [cite: 105][cite_start], `import_port_name`[cite: 147].
-* [cite_start]**Socio-Economic & Logistics:** `fob` [cite: 133][cite_start], `exporter_name` [cite: 128][cite_start], `importer_name` [cite: 130][cite_start], `transport_type`[cite: 144].
-* [cite_start]**Agricultural Dynamics:** `soy_eq` [cite: 132][cite_start], `land_use` [cite: 134][cite_start], `soy_yield` [cite: 152][cite_start], `double_cropping_share`[cite: 153].
-* [cite_start]**Commodity Splits:** `soybeans_a`, `meal_a`, `oil_a`, `cake_a` [cite: 157, 158, 159, 160][cite_start], `sh_crusing_to` [cite: 173][cite_start], domestic/international allocation factors (`dom_kmeal_af`, `for_oil_af`, etc.)[cite: 174, 175, 176, 177].
-* [cite_start]**Data Quality Indicators:** `municipality_data_quality` [cite: 135][cite_start], `export_port_data_quality` [cite: 136][cite_start], `import_country_data_quality` [cite: 137][cite_start], `land_use_quality_data` [cite: 140][cite_start], `double_cropping_quality`[cite: 154].
+### Output 1: `trase_db_imputed_expanded.parquet`
+Imputed Trase database expanded with double-cropping practices and individualized soy commodity market splits.
+* **Location/Routing:** `export_port_code`, `export_port_name_mo` (reassigned ports for logical transoceanic shipping) , `port_municipality_code`, `municipality_code`, `import_country_name`, `import_port_name`.
+* **Socio-Economic & Logistics:** `fob`, `exporter_name`, `importer_name`, `transport_type`.
+* **Agricultural Dynamics:** `soy_eq`, `land_use`, `soy_yield`, `double_cropping_share`.
+* **Commodity Splits:** `soybeans_a`, `meal_a`, `oil_a`, `cake_a`, `sh_crusing_to`, domestic/international allocation factors (`dom_kmeal_af`, `for_oil_af`, etc.).
+* **Data Quality Indicators:** `municipality_data_quality`, `export_port_data_quality`, `import_country_data_quality`, `land_use_quality_data`, `double_cropping_quality`.
 
-### [cite_start]Output 2: `Eco_zone_area_mun.parquet` [cite: 178]
-[cite_start]Mapped municipal areas distributed by IUCN ecological zone type[cite: 179].
-* [cite_start]`municipality_code` [cite: 180][cite_start], `eco_zone` [cite: 181][cite_start], `area_eco_zone`[cite: 182].
+### Output 2: `Eco_zone_area_mun.parquet`
+Mapped municipal areas distributed by IUCN ecological zone type.
+*`municipality_code`, `eco_zone`, `area_eco_zone`.
 
-### [cite_start]Output 3: `l_cover_area_full.parquet` [cite: 183]
-[cite_start]Municipal land cover shifts over a 3-year prior window relative to the analysis year[cite: 184].
-* [cite_start]`cov0` (Land cover 3 years prior) [cite: 186][cite_start], `cov1` (Current land cover) [cite: 187][cite_start], `burnt` (Binary wildfire event: 1=Yes, 0=No) [cite: 188][cite_start], `npixel` [cite: 189][cite_start], `csoc_md` (Soil organic carbon delta) [cite: 190][cite_start], `area` [cite: 191][cite_start], `municipality_code` [cite: 192][cite_start], `year`[cite: 193].
+### Output 3: `l_cover_area_full.parquet` 
+Municipal land cover shifts over a 3-year prior window relative to the analysis year.
+* `cov0` (Land cover 3 years prior), `cov1` (Current land cover), `burnt` (Binary wildfire event: 1=Yes, 0=No), `npixel`, `csoc_md` (Soil organic carbon delta), `area`, `municipality_code`, `year`.
 
-### Output 4: `sLULUC_em.parquet` [cite: 194]
-Uncertainty simulation iterations computing Land-Use Change derived emissions[cite: 195, 196, 197, 198].
-* [cite_start]Emissions: `CO2e_soc` (from SOC changes) [cite: 199][cite_start], `CO2e_bmb` (above-ground biomass carbon changes) [cite: 200][cite_start], `CH4e`, `N2Oe`, `NOxe` (from biomass burning during clearing)[cite: 201, 202, 203].
+### Output 4: `sLULUC_em.parquet`
+Uncertainty simulation iterations computing Land-Use Change derived emissions.
+* Emissions: `CO2e_soc` (from SOC changes), `CO2e_bmb` (above-ground biomass carbon changes), `CH4e`, `N2Oe`, `NOxe` (from biomass burning during clearing).
 
 ---
 ## Computational Environment & Dependencies
@@ -194,8 +193,9 @@ To ensure exact computational reproducibility, the analytical pipeline was execu
 ### Software & Core Dependencies
 * **R Version:** 4.6.0 (2026-04-24 ucrt)
 * **RStudio Version:** 2026.05.0+218
-
+<p align="justify">
 The pipeline relies on the following key libraries, each serving a specific role in our Big Data and geospatial framework:
+</p>
 
 ### Required R Packages
 | Package | Version | 
@@ -217,22 +217,32 @@ The pipeline relies on the following key libraries, each serving a specific role
 ## Methodological & Implementation Notes
 
 ### Data Processing and Imputation Rules
+<p align="justify">
 The data pipeline includes cleaning, filtering, data frame merging, spatial cropping, and uncertainty parameter simulation[cite: 9]. [cite_start]Missing data points within the source datasets were handled using strict imputation rules:
+</p>
+    
 * **Continuous Numeric Variables:** Imputed using weighted mean values.
 * **Discrete Variables / Factors:** Imputed using sectorized mode values.
 
 ### Memory Optimization & Staged Calculations
+<p align="justify">
 Due to computational RAM limitations during big-data spatial processing, calculations are executed in chronological stages[cite: 22]. [cite_start]Intermediate files are cached and subsequently used as inputs to compile the final outputs.
+</p>
 
 ### Code Verification Mode (Quick Run)
+<p align="justify">
 [cite_start]To facilitate rapid testing and code verification by external users, a built-in filter option models data for a single municipality and a specific calendar year[cite: 23]. [cite_start]The fully processed dataset, however, is available within the `output_data/` folder[cite: 24].
+</p>
 
 ### Proprietary Data Compliance (Ecoinvent)
+<p align="justify">
 * [cite_start]**Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes[cite: 98]. [cite_start]Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`[cite: 99]. [cite_start]Users must consult the original source to apply the exact values[cite: 99].
+</p>
 
----
 ## Supplementary Data Tables (Stored in Zenodo)
+<p align="justify">
 [cite_start]*Note: Any additional Excel files uploaded to the main Zenodo repository alongside this project code are supplementary to the manuscript text[cite: 2]. [cite_start]Every supplementary Excel file includes a dedicated internal sheet detailing variable definitions, units, and methodological context[cite: 204].*
+</p>
 
 ## Contact / Author
 nelsiso@upv.edu.es
