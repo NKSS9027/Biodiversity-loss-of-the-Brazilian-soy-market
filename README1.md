@@ -3,33 +3,21 @@
 ## Overview
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
 
-Due to the multi-temporal scale of the high-resolution geospatial layers, the extensive Monte Carlo simulations, and the data-intensive nature inherent to comprehensive LCAs, the complete raw infrastructure of this project encompasses a multi-terabyte data volume that far exceeds both the hosting thresholds of GitHub and the standard distribution capacities of public repositories like Zenodo.
+This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]
 
 ---
 
-## Data Architecture, Comprehensive Reproducibility & Storage Constraints
+## Data Availability and Reproducibility Framework
 
-The analytical framework developed in this study is based on multi-temporal, high-resolution geospatial datasets, extensive Monte Carlo simulations, and data-intensive Life Cycle Assessment (LCA) workflows. Consequently, the complete computational infrastructure encompasses several terabytes of raw and processed data, substantially exceeding the storage limitations imposed by code-hosting platforms such as GitHub and the standard distribution capacities of public data repositories, including Zenodo.
+Due to the multi-terabyte size of the high-resolution geospatial and LCA datasets (spanning 2004–2022), the complete analytical infrastructure exceeds the standard storage limits of platforms like GitHub and Zenodo. To ensure open science, transparency, and computational reproducibility, we implemented a decoupled hybrid data-sharing architecture:
 
-The full analytical model covers the period from 2004 to 2022 and relies on wall-to-wall annual geospatial datasets, including Land Cover, Soil Organic Carbon, and Burned Area raster layers. The generation and processing of these datasets require historical baseline information spanning 2001–2022, resulting in a large and complex data architecture necessary for the temporal consistency of the analyses.
+Code Repository (GitHub): Serves as the central platform for methodological transparency, hosting all version-controlled R scripts, custom functions, documentation, and the complete RStudio project structure (.Rproj).
 
-To reconcile the principles of open science, transparency, and reproducibility with the practical constraints associated with large-scale geospatial data storage and dissemination, a decoupled two-tier hybrid data-sharing architecture was implemented.
+Reproducibility Dataset (Zenodo): Functions as the core package for workflow validation. It provides an optimised, lightweight subset—including tabular databases, shapefiles, intermediate outputs, and specific raster layers—designed to fully execute and verify the pipeline for a default reference year (2019) and a single selected municipality.
 
-The first component consists of the code repository hosted on GitHub. This repository contains all version-controlled R scripts, custom computational functions, methodological documentation, and the complete RStudio project structure (.Rproj) required to execute the analytical workflow. The repository serves as the central platform for code dissemination, version tracking, and methodological transparency.
-
-The second component is the reproducibility dataset deposited in Zenodo, which functions as the core data package for workflow validation. This dataset has been specifically optimized to provide a lightweight yet fully functional subset of the original database, designed exclusively to ensure computational reproducibility and pipeline verification. It includes all tabular databases, vector spatial datasets (shapefiles), intermediate processing outputs, and only the raster layers strictly necessary to execute and validate the complete workflow for the default reference year (2019) and the selected verification municipality. This approach enables users to reproduce all methodological steps, evaluate model performance, and verify analytical outputs without requiring access to the full multi-terabyte data infrastructure.
-
-The remaining geospatial layers required to reconstruct the complete temporal analysis can be obtained directly from the original data providers. Detailed information regarding the source, access procedures, and download links for each dataset is provided in the corresponding data-source documentation sections of this repository. This strategy ensures full methodological transparency while maintaining compliance with data-sharing best practices and the technical limitations associated with distributing very large geospatial datasets.
+Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitations or restrictive licensing types, which are necessary to obtain the full comprehensive results of the study, are detailed further below. Specific instructions for accessing and obtaining these files are provided in the description section of each dataset.
 
 
-The complete analytical model spans an operational timeline from **2004 to 2022**, relying on wall-to-wall annual geospatial layers (including Land Cover, Soil Organic Carbon, and Burned Area rasters) that require  baselines stretching from **2001 to 2022**. 
-
-To balance strict compliance with open science principles against these severe storage and system constraints, this repository utilizes a decoupled, **two-tiered hybrid data-sharing architecture**:
-
-1. **Code Repository (GitHub - This site):** Contains all version-controlled R scripts, custom computational functions, technical documentation, and the RStudio project framework (`.Rproj`).
-2. **Reproducibility Dataset (Zenodo - Data Core):** Hosts a fully optimized, lightweight data subset engineered exclusively for code validation and pipeline transparency. It includes all tabular databases, shapefiles, intermediate checkpoints, and **only the specific spatial raster layers required to successfully execute and verify the pipeline for the default target year (2019) and the filtered verification municipality**. 
-
-This repository serves as the comprehensive supplementary material for the associated scientific publication[cite: XX].
 ---
 
 ## Data Availability & Big Data Workflow
