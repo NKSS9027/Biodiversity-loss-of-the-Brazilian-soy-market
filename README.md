@@ -41,7 +41,31 @@ The internal R project directory is organized as follows:
 | `tidyverse` | [cite_start]2.0.0 [cite: 21] | | |
 
 ---
+```
+[INPUT FILES]                 [INTERMEDIATE PROCESISNG]               [FINAL RESULTS]
+                                                                                
+x1 (Trase Supply Chain) ----------> df_trase (1, 2, 3) Imputaciones 
+                                           │
+x2 (Spatial Units) ────────────────────────┼─> [df_trase Consolidada] 
+x3 (Double Cropping) ──────────────────────┤   Calcula: sh_bean, sh_meal,
+x4 (Comex Municipios) ─────────────────────┤   sh_cake, sh_oil y flujos: ───>  df_sch_soy_eq
+x5 (Country IDs) ──────────────────────────┤   (soybean, bean_meal, cake, oil)        │
+x6 (Brazil Crushing) ──────────────────────┘                                          │
+                                                                                      ▼
+x7 (Precios Aceite/Harina) ───────> Asignación Económica (af) ───────────┐    [MATRIZ MAESTRA]
+                                                                         ├─>    (df_sch1)
+x8 a x14 (Capas Geo/Raster) ──────> Matrices Spatiales y LULUC ──────────┤    Une flujos con
+x15, x22 (Factores Biodiv.) ──────> df_bgp (Bucle Estocástico CF) ───────┤    impactos por
+x16, x17, x18 (LCI Campo) ────────> df_LCI_pr (Inventario Agrícola) ─────┤    muestra estocástica
+x19, x20, x21 (Distancias) ───────> df_dis1 (Logística de Transporte) ───┤    (Id_sample)
+x23 (Ecoinvent Procesos) ─────────> df_pf1_pr (Crushing e Insumos) ──────┘            │
+                                                                                      │ Desagregación
+                                                                                      ├─> df_soybean
+                                                                                      ├─> df_meal
+                                                                                      ├─> df_cake
+                                                                                      └─> df_oil
 
+```
 ## Methodological & Implementation Notes
 
 ### Data Processing and Imputation Rules
