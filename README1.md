@@ -1,14 +1,17 @@
 # Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
 
 ## Overview
+<p align="justify">
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
+</p>
 
+<p align="justify">
 This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]
-
+</p>
 ---
 
 ## Data Availability and Reproducibility Framework
-
+<div align="justify">
 Due to the multi-terabyte size of the high-resolution geospatial and LCA datasets (spanning 2004–2022), the complete analytical infrastructure exceeds the standard storage limits of platforms like GitHub and Zenodo. To ensure open science, transparency, and computational reproducibility, we implemented a decoupled hybrid data-sharing architecture:
 
 Code Repository (GitHub): Serves as the central platform for methodological transparency, hosting all version-controlled R scripts, custom functions, documentation, and the complete RStudio project structure (.Rproj).
@@ -20,7 +23,7 @@ Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitati
 La deforestación asociada a la cadena de suministro de la soja ha sido ampliamente documentada [^1]. Para calcular los impactos biofísicos, nos basamos en el marco metodológico del ciclo de vida^[Sintaxis alternativa: también puedes escribir texto corto aquí directamente].
 
 Además, los factores de caracterización espacializados se extrajeron de estudios previos de biodiversidad [^2].
-
+</div>
 ---
 
 To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
@@ -128,64 +131,6 @@ graph LR
 
 
 ```
-
-
----
-
-## Repository & Supplementary Material Structure
-[cite_start]This research output consists of two main components[cite: 1, 2]:
-1. [cite_start]**The RStudio Project (Archived via GitHub):** Contains reproducible source code and required input datasets[cite: 1].
-2. [cite_start]**Supplementary Data Tables (Stored directly in Zenodo):** Independent supplementary datasets supporting the main manuscript[cite: 2].
-
-The internal R project directory is organized as follows:
-* [cite_start]`input_data/`: Contains raw socio-economic, trade, and spatial datasets (Excel, .csv, raster .TIF, and vector .shp formats)[cite: 6].
-* [cite_start]`output_data/`: Stores intermediate checkpoints and final high-resolution estimation results[cite: 8, 24].
-* [cite_start]The root directory contains the main execution script and the R project environment file[cite: 7].
-
----
-
-## Computational Environment & Dependencies
-[cite_start]To ensure exact computational reproducibility, the analytical pipeline was executed under the following specifications[cite: 13]:
-
-### Hardware Architecture
-* [cite_start]**Processor:** Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz [cite: 15]
-* [cite_start]**Installed RAM:** 32.0 GB (31.8 GB usable) [cite: 16]
-* [cite_start]**System Type:** 64-bit Operating System, x64-based processor [cite: 17]
-
-### Software Environment
-* [cite_start]**R Version:** 4.6.0 (2026-04-24 ucrt) [cite: 18]
-* [cite_start]**RStudio Version:** 2026.05.0+218 [cite: 19]
-
-### Required R Packages
-| Package | Version | Package | Version |
-| :--- | :--- | :--- | :--- |
-| `openxlsx` | [cite_start]4.2.8.1 [cite: 20] | `dtplyr` | [cite_start]1.3.3 [cite: 21] |
-| `triangle` | [cite_start]1.1.0 [cite: 20] | `raster` | [cite_start]3.6-32 [cite: 21] |
-| `arrow` | [cite_start]23.0.1.2 [cite: 20] | `sp` | [cite_start]2.2-1 [cite: 21] |
-| `rnaturalearthdata` | [cite_start]1.0.0 [cite: 20] | `terra` | [cite_start]1.9-11 [cite: 21] |
-| `sf` | [cite_start]1.1-0 [cite: 20] | `here` | [cite_start]1.0.2 [cite: 21] |
-| `tidyverse` | [cite_start]2.0.0 [cite: 21] | | |
-
----
-
-## Methodological & Implementation Notes
-
-### Data Processing and Imputation Rules
-[cite_start]The data pipeline includes cleaning, filtering, data frame merging, spatial cropping, and uncertainty parameter simulation[cite: 9]. [cite_start]Missing data points within the source datasets were handled using strict imputation rules[cite: 11]:
-* [cite_start]**Continuous Numeric Variables:** Imputed using weighted mean values[cite: 12].
-* [cite_start]**Discrete Variables / Factors:** Imputed using sectorized mode values[cite: 12].
-
-### Memory Optimization & Staged Calculations
-[cite_start]Due to computational RAM limitations during big-data spatial processing, calculations are executed in chronological stages[cite: 22]. [cite_start]Intermediate files are cached and subsequently used as inputs to compile the final outputs[cite: 22].
-
-### Code Verification Mode (Quick Run)
-[cite_start]To facilitate rapid testing and code verification by external users, a built-in filter option models data for a single municipality and a specific calendar year[cite: 23]. [cite_start]The fully processed dataset, however, is available within the `output_data/` folder[cite: 24].
-
-### Proprietary Data Compliance (Ecoinvent)
-* [cite_start]**Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes[cite: 98]. [cite_start]Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`[cite: 99]. [cite_start]Users must consult the original source to apply the exact values[cite: 99].
-
----
-
 ## Data Dictionary: Input Files (`input_data/`)
 [cite_start]*Note: All Excel (.xlsx) files contain embedded metadata sheets/legends detailing their specific contents[cite: 204]. For plain-text and spatial formats, descriptions are detailed below[cite: 205].*
 
@@ -238,6 +183,49 @@ Imputed Trase database expanded with double-cropping practices and individualize
 ### Output 4: `sLULUC_em.parquet` [cite: 194]
 Uncertainty simulation iterations computing Land-Use Change derived emissions[cite: 195, 196, 197, 198].
 * [cite_start]Emissions: `CO2e_soc` (from SOC changes) [cite: 199][cite_start], `CO2e_bmb` (above-ground biomass carbon changes) [cite: 200][cite_start], `CH4e`, `N2Oe`, `NOxe` (from biomass burning during clearing)[cite: 201, 202, 203].
+
+---
+## Computational Environment & Dependencies
+<p align="justify">
+To ensure exact computational reproducibility, the analytical pipeline was executed under the following specifications:
+</p>
+
+### Hardware Architecture
+* [cite_start]**Processor:** Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz [cite: 15]
+* [cite_start]**Installed RAM:** 32.0 GB (31.8 GB usable) [cite: 16]
+* [cite_start]**System Type:** 64-bit Operating System, x64-based processor [cite: 17]
+
+### Software Environment
+* [cite_start]**R Version:** 4.6.0 (2026-04-24 ucrt) [cite: 18]
+* [cite_start]**RStudio Version:** 2026.05.0+218 [cite: 19]
+
+### Required R Packages
+| Package | Version | Package | Version |
+| :--- | :--- | :--- | :--- |
+| `openxlsx` | [cite_start]4.2.8.1 [cite: 20] | `dtplyr` | [cite_start]1.3.3 [cite: 21] |
+| `triangle` | [cite_start]1.1.0 [cite: 20] | `raster` | [cite_start]3.6-32 [cite: 21] |
+| `arrow` | [cite_start]23.0.1.2 [cite: 20] | `sp` | [cite_start]2.2-1 [cite: 21] |
+| `rnaturalearthdata` | [cite_start]1.0.0 [cite: 20] | `terra` | [cite_start]1.9-11 [cite: 21] |
+| `sf` | [cite_start]1.1-0 [cite: 20] | `here` | [cite_start]1.0.2 [cite: 21] |
+| `tidyverse` | [cite_start]2.0.0 [cite: 21] | | |
+
+---
+
+## Methodological & Implementation Notes
+
+### Data Processing and Imputation Rules
+The data pipeline includes cleaning, filtering, data frame merging, spatial cropping, and uncertainty parameter simulation[cite: 9]. [cite_start]Missing data points within the source datasets were handled using strict imputation rules:
+* **Continuous Numeric Variables:** Imputed using weighted mean values.
+* **Discrete Variables / Factors:** Imputed using sectorized mode values.
+
+### Memory Optimization & Staged Calculations
+Due to computational RAM limitations during big-data spatial processing, calculations are executed in chronological stages[cite: 22]. [cite_start]Intermediate files are cached and subsequently used as inputs to compile the final outputs.
+
+### Code Verification Mode (Quick Run)
+[cite_start]To facilitate rapid testing and code verification by external users, a built-in filter option models data for a single municipality and a specific calendar year[cite: 23]. [cite_start]The fully processed dataset, however, is available within the `output_data/` folder[cite: 24].
+
+### Proprietary Data Compliance (Ecoinvent)
+* [cite_start]**Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes[cite: 98]. [cite_start]Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`[cite: 99]. [cite_start]Users must consult the original source to apply the exact values[cite: 99].
 
 ---
 ## Supplementary Data Tables (Stored in Zenodo)
