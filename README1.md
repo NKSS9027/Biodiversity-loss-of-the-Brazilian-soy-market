@@ -246,10 +246,10 @@ Uncertainty simulation iterations computing Land-Use Change derived emissions[ci
 ## Contact / Author
 nelsiso@upv.edu.es
 
-## References
-[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
-[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
-
 ---
 ## License
 This repository is licensed under the **MIT License** for the source code and software scripts, and the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** for the datasets and metadata structures.
+
+## References
+[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
+[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
