@@ -17,7 +17,13 @@ Reproducibility Dataset (Zenodo): Functions as the core package for workflow val
 
 Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitations or restrictive licensing types, which are necessary to obtain the full comprehensive results of the study, are detailed further below. Specific instructions for accessing and obtaining these files are provided in the description section of each dataset.
 
+La deforestación asociada a la cadena de suministro de la soja ha sido ampliamente documentada [^1]. Para calcular los impactos biofísicos, nos basamos en el marco metodológico del ciclo de vida^[Sintaxis alternativa: también puedes escribir texto corto aquí directamente].
 
+Además, los factores de caracterización espacializados se extrajeron de estudios previos de biodiversidad [^2].
+
+## References
+[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
+[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
 ---
 
 To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
