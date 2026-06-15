@@ -21,9 +21,6 @@ La deforestación asociada a la cadena de suministro de la soja ha sido ampliame
 
 Además, los factores de caracterización espacializados se extrajeron de estudios previos de biodiversidad [^2].
 
-## References
-[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
-[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
 ---
 
 To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
@@ -248,6 +245,10 @@ Uncertainty simulation iterations computing Land-Use Change derived emissions[ci
 
 ## Contact / Author
 nelsiso@upv.edu.es
+
+## References
+[^1]: Zu Ermgassen, E. K., et al. (2020). *The effects of international trade on deforestation in Brazil*. Global Environmental Change.
+[^2]: Chaudhary, A., & Brooks, T. M. (2018). *Land use intensity and country-specific characterization factors for biodiversity loss*. Environmental Science & Technology.
 
 ---
 ## License
