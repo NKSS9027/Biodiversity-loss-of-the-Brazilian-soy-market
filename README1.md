@@ -8,6 +8,20 @@ Due to the multi-temporal scale of the high-resolution geospatial layers, the ex
 ---
 
 ## Data Architecture, Comprehensive Reproducibility & Storage Constraints
+
+The analytical framework developed in this study is based on multi-temporal, high-resolution geospatial datasets, extensive Monte Carlo simulations, and data-intensive Life Cycle Assessment (LCA) workflows. Consequently, the complete computational infrastructure encompasses several terabytes of raw and processed data, substantially exceeding the storage limitations imposed by code-hosting platforms such as GitHub and the standard distribution capacities of public data repositories, including Zenodo.
+
+The full analytical model covers the period from 2004 to 2022 and relies on wall-to-wall annual geospatial datasets, including Land Cover, Soil Organic Carbon, and Burned Area raster layers. The generation and processing of these datasets require historical baseline information spanning 2001–2022, resulting in a large and complex data architecture necessary for the temporal consistency of the analyses.
+
+To reconcile the principles of open science, transparency, and reproducibility with the practical constraints associated with large-scale geospatial data storage and dissemination, a decoupled two-tier hybrid data-sharing architecture was implemented.
+
+The first component consists of the code repository hosted on GitHub. This repository contains all version-controlled R scripts, custom computational functions, methodological documentation, and the complete RStudio project structure (.Rproj) required to execute the analytical workflow. The repository serves as the central platform for code dissemination, version tracking, and methodological transparency.
+
+The second component is the reproducibility dataset deposited in Zenodo, which functions as the core data package for workflow validation. This dataset has been specifically optimized to provide a lightweight yet fully functional subset of the original database, designed exclusively to ensure computational reproducibility and pipeline verification. It includes all tabular databases, vector spatial datasets (shapefiles), intermediate processing outputs, and only the raster layers strictly necessary to execute and validate the complete workflow for the default reference year (2019) and the selected verification municipality. This approach enables users to reproduce all methodological steps, evaluate model performance, and verify analytical outputs without requiring access to the full multi-terabyte data infrastructure.
+
+The remaining geospatial layers required to reconstruct the complete temporal analysis can be obtained directly from the original data providers. Detailed information regarding the source, access procedures, and download links for each dataset is provided in the corresponding data-source documentation sections of this repository. This strategy ensures full methodological transparency while maintaining compliance with data-sharing best practices and the technical limitations associated with distributing very large geospatial datasets.
+
+
 The complete analytical model spans an operational timeline from **2004 to 2022**, relying on wall-to-wall annual geospatial layers (including Land Cover, Soil Organic Carbon, and Burned Area rasters) that require  baselines stretching from **2001 to 2022**. 
 
 To balance strict compliance with open science principles against these severe storage and system constraints, this repository utilizes a decoupled, **two-tiered hybrid data-sharing architecture**:
