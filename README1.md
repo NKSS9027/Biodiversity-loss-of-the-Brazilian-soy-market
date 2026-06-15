@@ -20,12 +20,10 @@ Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitati
 
 ---
 
-## Data Availability & Big Data Workflow
+To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
 
-To fully replicate the analysis or run the scripts, you must combine the code repository with the heavy data cores hosted on Zenodo. 
-
-### 1. Repository Structure
-The project relies on strict relative paths managed via the `here` package. When fully assembled, the root directory must mirror the following structure:
+### Repository Structure
+The project relies on strict relative paths. When fully assembled, the root directory must mirror the following structure:
 
 ```text
 soy-biodiversity-loss-model/
@@ -127,11 +125,6 @@ graph LR
 
 
 ```
-
-
-
-[cite_start]This repository contains the R Studio project, source code, input datasets, and output results for assessing the biodiversity loss impacts driven by the international trade of Brazilian soy[cite: 1]. [cite_start]The evaluation framework is built upon an attributional Life Cycle Assessment (LCA)[cite: 5]. [cite_start]It dynamically links supply chain activity data with spatially explicit characterization factors via linear functions to quantify habitat transformation and occupation impacts[cite: 5]. 
-
 
 
 ---
