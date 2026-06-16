@@ -145,8 +145,8 @@ graph LR
 | **Input 12** | `raster/burned_area/burned_area_` |<div align="justify">  Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^8].</div> |
 | **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^9][^10].</div> |
 | **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs (https://www.ibge.gov.br/geociencias/downloads-geociencias.html) (https://www.worldwildlife.org/publications/).</div> |
-| **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^11]. </div>|
-| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^16].</div> |
+| **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al.[^11]. </div>|
+| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33].</div> |
 | **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^18], and fossil fuel combustion (Sphera)[^17]. </div>|
 | **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments[^18]. </div>|
 | **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. </div>|
@@ -262,4 +262,26 @@ This repository is licensed under the **MIT License** for the source code and so
 [^8]: MapBiomas. MapBiomas Project - Collection [3] of the Annual Fire Scars in Brazil. https://brasil.mapbiomas.org/en/metodo-mapbiomas-fogo/ (2025).
 [^9]: IPCC. 2006. 2006 IPCC Guidelines for National Greenhouse  as Inventories. Volume 4 Agriculture, Forestry and Other Land Use. https://www.ipcc-nggip.iges.or.jp/public/2019rf/vol4.html (2006).
 [^10]: IPCC. 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse  as Inventories. Volume 4 Agriculture, Forestry and Other Land Use. https://www.ipcc-nggip.iges.or.jp/public/2019rf/vol4.html (2019).
-[^11]: Scherer, L. et al. Biodiversity Impact Assessment Considering Land Use Intensities and Fragmentation. Environ. Sci. Technol. 57, 19612–19623 (2023). https://doi.org/10.1021/acs.est.3c04191
+[^11]: Scherer, L. et al. Biodiversity Impact Assessment Considering Land Use Intensities and Fragmentation. Environ. Sci. Technol. 57, 19612–19623 (2023).
+[^12]: Giusti, G., Galo, N. R., Tóffano Pereira, R. P., Lopes Silva, D. A. & Filimonau, V. Assessing the impact of drought on carbon footprint of soybean production from the life cycle perspective. J. Clean. Prod. 425, 138843 (2023).
+[^13]: Ricardo, K. et al. Environmental performance of phytosanitary control techniques on soybean crop estimated by life cycle assessment (LCA). Environmental Science and Pollution Research 2023 30:20 30, 58315–58329 (2023).
+[^14]: Capaz, R. S. et al. Environmental trade-offs of renewable jet fuels in Brazil: Beyond the carbon footprint. Science of The Total Environment 714, 136696 (2020).
+[^15]: Brito, T. et al. Life Cycle Assessment for Soybean Supply Chain: A Case Study of State of Pará, Brazil. Agronomy 2023, Vol. 13, 13, (2023).
+[^16]: Knoope, M. M. J., Balzer, C. H. & Worrell, E. Analysing the water and greenhouse gas effects of soya bean-based biodiesel in five different regions. GCB Bioenergy 11, 381–399 (2019).
+[^17]: Lehuger, S., Gabrielle, B. & Gagnaire, N. Environmental impact of the substitution of imported soybean meal with locally-produced rapeseed meal in dairy cow feed. J. Clean. Prod. 17, 616–624 (2009).
+[^18]: Cavalett, O. & Ortega, E. Emergy, nutrients balance, and economic assessment of soybean production and industrialization in Brazil. J. Clean. Prod. 17, 762–771 (2009).
+[^19]: Cavalett, O. & Ortega, E. Integrated environmental assessment of biodiesel production from soybean in Brazil. J. Clean. Prod. 18, 55–70 (2010).
+[^20]: Prudêncio da Silva, V., van der Werf, H. M. G., Spies, A. & Soares, S. R. Variability in environmental impacts of Brazilian soybean according to crop production and transport scenarios. J. Environ. Manage. 91, 1831–1839 (2010).
+[^21]: Mourad, A. L. & Walter, A. The energy balance of soybean biodiesel in Brazil: A case study. Biofuels, Bioproducts and Biorefining 5, 185–197 (2011).
+[^22]: Alvarenga, R. A. F. De, Da Silva Júnior, V. P. & Soares, S. R. Comparison of the ecological footprint and a life cycle impact assessment method for a case study on Brazilian broiler feed production. J. Clean. Prod. 28, 25–32 (2012).
+[^23]: Romanelli, T. L., Nardi, H. D. S. & Saad, F. A. Material embodiment and energy flows as efficiency indicators of soybean (Glycine max) production in Brazil. Engenharia Agrícola 32, 261–270 (2012).
+[^24]: Castanheira, É. G. & Freire, F. Greenhouse gas assessment of soybean production: implications of land use change and different cultivation systems. J. Clean. Prod. 54, 49–60 (2013).
+[^25]: Castanheira, É. G., Grisoli, R., Coelho, S., Anderi Da Silva, G. & Freire, F. Life-cycle assessment of soybean-based biodiesel in Europe: comparing grain, oil and biodiesel import from Brazil. J. Clean. Prod. 102, 188–201 (2015).
+[^26]: Maciel, V. G. et al. Life Cycle Inventory for the agricultural stages of soybean production in the state of Rio Grande do Sul, Brazil. J. Clean. Prod. 93, 65–74 (2015).
+[^27]: Raucci, G. S. et al. Greenhouse gas assessment of Brazilian soybean production: a case study of Mato Grosso State. J. Clean. Prod. 96, 418–425 (2015).
+[^28]: Alejos Altamirano, C. A., Yokoyama, L., de Medeiros, J. L. & de Queiroz Fernandes Araújo, O. Ethylic or methylic route to soybean biodiesel? Tracking environmental answers through life cycle assessment. Appl. Energy 184, 1246–1263 (2016).
+[^29]: Matsuura, M. I. S. F. et al. Life-cycle assessment of the soybean-sunflower production system in the Brazilian Cerrado. The International Journal of Life Cycle Assessment 2016 22:4 22, 492–501 (2016).
+[^30]: Pashaei Kamali, F. et al. Evaluation of the environmental, economic, and social performance of soybean farming systems in southern Brazil. J. Clean. Prod. 142, 385–394 (2017).
+[^31]: Cerri, C. E. P. et al. Assessing the greenhouse gas emissions of Brazilian soybean biodiesel production. PLoS One 12, e0176948 (2017).
+[^32]: Esteves, E. M. M., Esteves, V. P. P., Bungenstab, D. J., Araújo, O. de Q. F. & Morgado, C. do R. V. Greenhouse gas emissions related to biodiesel from traditional soybean farming compared to integrated crop-livestock systems. J. Clean. Prod. 179, 81–92 (2018).
+[^33]: Esteves, V. P. P. et al. Land use change (LUC) analysis and life cycle assessment (LCA) of Brazilian soybean biodiesel. Clean Technologies and Environmental Policy 2016 18:6 18, 1655–1673 (2016).
