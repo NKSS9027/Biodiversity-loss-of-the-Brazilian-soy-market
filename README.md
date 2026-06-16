@@ -238,11 +238,6 @@ To facilitate rapid testing and code verification by external users, a built-in 
 * <b>Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):</b> Impact indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes. Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`. Users sould refer to the original source to apply the exact values.
 </p>
 
-## Supplementary Data Tables (Stored in Zenodo)
-<p align="justify">
-*Note: Any additional Excel files uploaded to the main Zenodo repository alongside this project code are supplementary to the manuscript text. Every supplementary Excel file includes a dedicated internal sheet detailing the variable definitions, units, and methodological context.*
-</p>
-
 ## Contact / Author
 nelsiso@upv.edu.es
 
