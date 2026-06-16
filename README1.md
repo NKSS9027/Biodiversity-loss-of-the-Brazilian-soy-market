@@ -1,4 +1,4 @@
-# Biodiversity Loss Impacts of the Brazilian Soy Supply Chain
+# Biodiversity Loss Footprint of the Brazilian Soy Supply Chain
 
 ## Overview
 <p align="justify">
