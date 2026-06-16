@@ -6,7 +6,7 @@ This repository contains the R implementation and data architecture for estimati
 </p>
 
 <p align="justify">
-This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]
+<b>This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]</b>
 </p>
 
 ## Data Availability and Reproducibility Framework
@@ -168,7 +168,7 @@ Imputed Trase database expanded with double-cropping practices and individualise
 * **Data Quality Indicators:** `municipality_data_quality`, `export_port_data_quality`, `import_country_data_quality`, `land_use_quality_data`, `double_cropping_quality`.
 
 ### Output 2: `Eco_zone_area_mun.parquet`
-Mapped municipal areas distributed by IUCN ecological zone type.
+Mapped municipal areas distributed by IPCC climate zone.
 *`municipality_code`, `eco_zone`, `area_eco_zone`.
 
 ### Output 3: `l_cover_area_full.parquet` 
@@ -236,7 +236,7 @@ To facilitate rapid testing and code verification by external users, a built-in 
 
 ### Proprietary Data Compliance (Ecoinvent)
 <p align="justify">
-* **Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Impact indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes. Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`. Users sould refer to the original source to apply the exact values.
+* <b>Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):</b> Impact indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes. Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`. Users sould refer to the original source to apply the exact values.
 </p>
 
 ## Supplementary Data Tables (Stored in Zenodo)
