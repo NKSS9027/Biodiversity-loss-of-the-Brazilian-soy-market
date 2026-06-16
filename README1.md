@@ -138,8 +138,8 @@ graph LR
 | **Input 5** | `destination_countries_id.xlsx` | <div align="justify"> Identification data for destination countries used for dataframe linkage.</div>|
 | **Input 6** | `brazil_crushing.xlsx` | <div align="justify"> Monthly commercial balance of domestic soy commodity per municipality (1998–2024). Sourced from ABIOVE [^5]. </div>|
 | **Input 7** | `soy_oil_and_meal_prices.xlsx` | <div align="justify"> Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. Sourced from ABIOVE[^5].</div> |
-| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |<div align="justify"> Polygon vector layer of Brazilian municipalities for spatial identification [^7]. </div>|
-| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | <div align="justify"> IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks [^8].</div> |
+| **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |<div align="justify"> Polygon vector layer of Brazilian municipalities for spatial identification (https://www.ibge.gov.br/geociencias/downloads-geociencias.html). </div>|
+| **Input 9** | `raster/raster1/ecological_zone_BR.tif` | <div align="justify"> IPCC Climate Zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks (https://philipaudebert.users.earthengine.app/view/ipcc-climate-zones).</div> |
 | **Input 10** | `raster/land_cover/land_cover_` |<div align="justify">  MapBiomas Collection 8 land cover raster (30m). *Note: Due to storage constraints, only 2016 and 2019 are provided for code verification. The full series (2001–2022) is available at MapBiomas* [^9].</div>|
 | **Input 11** | `raster/soil_organic_carbon_soc/soc_` | <div align="justify"> Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas* [^10].</div> |
 | **Input 12** | `raster/burned_area/burned_area_` |<div align="justify">  Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^11].</div> |
