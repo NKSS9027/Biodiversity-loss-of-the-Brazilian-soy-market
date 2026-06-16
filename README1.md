@@ -132,7 +132,7 @@ graph LR
 | File Identifier | File Name / Path | Description & Source |
 | :--- | :--- | :--- |
 | **Input 1** | `trase_soy_supply_chain.xlsx` | <div align="justify"> Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. Adapted from Trase [^1].</div> |
-| **Input 2** | `nd2_nd3_spatial_units.xlsx` |Geographic coordinates of export and import ports[^2]. |
+| **Input 2** | `nd2_nd3_spatial_units.xlsx` |Geographic coordinates of export and import ports[^2].|
 | **Input 3** | `soy_maize_double_cropping.xlsx` |<div align="justify">  Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate the magnitude of double-cropping. Sourced from IBGE-SIDRA[^3]. </div>|
 | **Input 4** | `brazil_municipal_exports_2025.csv` | <div align="justify"> International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. Sourced from IBGE-COMEX [^4].</div> |
 | **Input 5** | `destination_countries_id.xlsx` | <div align="justify"> Identification data for destination countries used for dataframe linkage [^5].</div>|
