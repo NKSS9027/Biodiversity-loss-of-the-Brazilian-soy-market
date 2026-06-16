@@ -21,7 +21,6 @@ Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitati
 
 To fully replicate the analysis or run the scripts, users must combine the R code with the data cores hosted on Zenodo. 
 </div>
----
 
 ### Repository Structure
 The project relies on strict relative paths. When fully assembled, the root directory must mirror the following structure:
