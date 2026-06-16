@@ -146,14 +146,14 @@ graph LR
 | **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^9][^10].</div> |
 | **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs (https://www.ibge.gov.br/geociencias/downloads-geociencias.html) (https://www.worldwildlife.org/publications/).</div> |
 | **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al.[^11]. </div>|
-| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^12^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33].</div> |
-| **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^18], and fossil fuel combustion (Sphera)[^17]. </div>|
-| **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments[^18]. </div>|
-| **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. </div>|
-| **Input 20** |<div align="justify">  `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[^20].</div> |
-| **Input 22** |<div align="justify">  `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^21]. </div>|
-| **Input 23** |<div align="justify">  `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterisation factors for biodiversity loss linked to emissions[^22].</div> |
-| **Input 24** |<div align="justify">  `ecoinvent_unit_processes.xlsx` | Univt process indicators from Ecoinvent v3.10, modelling by SimaPro (https://simapro.com/). *Values anonymised to `1` for licensing compliance*[^23].</div> |
+| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33].</div> |
+| **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^9][^10], and fossil fuel combustion (Sphera)[^34]. </div>|
+| **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments. Similar sources than **Input 15**. </div>|
+| **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS (www.qgis.org) OpenRouteService (ORS)[^35]. </div>|
+| **Input 20** |<div align="justify">  `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS (www.qgis.org) Least Cost Path algorithm with navigable constraints[^36].</div> |
+| **Input 22** |<div align="justify">  `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^35]. </div>|
+| **Input 23** |<div align="justify">  `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterisation factors for biodiversity loss linked to emissions[^37].</div> |
+| **Input 24** |<div align="justify">  `ecoinvent_unit_processes.xlsx` | Univt process indicators from Ecoinvent v3.10, modelling by SimaPro (https://simapro.com/). *Values anonymised to `1` for licensing compliance*[^38].</div> |
 
 ---
 
@@ -285,3 +285,8 @@ This repository is licensed under the **MIT License** for the source code and so
 [^31]: Cerri, C. E. P. et al. Assessing the greenhouse gas emissions of Brazilian soybean biodiesel production. PLoS One 12, e0176948 (2017).
 [^32]: Esteves, E. M. M., Esteves, V. P. P., Bungenstab, D. J., Araújo, O. de Q. F. & Morgado, C. do R. V. Greenhouse gas emissions related to biodiesel from traditional soybean farming compared to integrated crop-livestock systems. J. Clean. Prod. 179, 81–92 (2018).
 [^33]: Esteves, V. P. P. et al. Land use change (LUC) analysis and life cycle assessment (LCA) of Brazilian soybean biodiesel. Clean Technologies and Environmental Policy 2016 18:6 18, 1655–1673 (2016).
+[^34]: SPHERA. GaBi Databases. GaBi Databases & Modelling Principles 2022 Preprint at https://gabi.sphera.com/international/databases/gabi-databases/ (2022).
+[^35]: HeiGIT, H. I. for G. T. Openroute service, ORS Tools QGIS Plugin v1.10.0. Preprint at https://openrouteservice.org/ (2025).
+[^36]: QGIS.org. Plugins by FlowMap Group@SESS-PKU - QGIS Python Plugins Repository. Preprint at https://plugins.qgis.org/plugins/author/FlowMap%2520Group%2540SESS-PKU/ (2022).
+[^37]: Verones, F. et al. LC-IMPACT: A regionalized life cycle damage assessment method. J. Ind. Ecol. 24, 1201–1219 (2020).
+[^38]: Wernet, G. et al. The ecoinvent database version 3 (part I): overview and methodology. International Journal of Life Cycle Assessment 21, 1218–1230 (2016).
