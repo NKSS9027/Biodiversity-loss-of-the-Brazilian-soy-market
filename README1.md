@@ -146,7 +146,7 @@ graph LR
 | **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^9][^10].</div> |
 | **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs (https://www.ibge.gov.br/geociencias/downloads-geociencias.html) (https://www.worldwildlife.org/publications/).</div> |
 | **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al.[^11]. </div>|
-| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33].</div> |
+| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^12^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33].</div> |
 | **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^18], and fossil fuel combustion (Sphera)[^17]. </div>|
 | **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments[^18]. </div>|
 | **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. </div>|
