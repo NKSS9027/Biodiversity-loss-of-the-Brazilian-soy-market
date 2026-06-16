@@ -144,8 +144,8 @@ graph LR
 | **Input 11** | `raster/soil_organic_carbon_soc/soc_` | <div align="justify"> Soil Organic Carbon (SOC) raster (30cm depth, 30m resolution, Beta1). *Note: Years 2016 and 2019 provided; full series at MapBiomas* [^7].</div> |
 | **Input 12** | `raster/burned_area/burned_area_` |<div align="justify">  Burned area event raster (30m) to estimate non-CO2 emissions from land clearing. *Note: Years 2016 and 2019 provided; full series at MapBiomas*[^8].</div> |
 | **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^9][^10].</div> |
-| **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[^10][^14].</div> |
-| **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^15]. </div>|
+| **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs (https://www.ibge.gov.br/geociencias/downloads-geociencias.html) (https://www.worldwildlife.org/publications/).</div> |
+| **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^11]. </div>|
 | **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^16].</div> |
 | **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^18], and fossil fuel combustion (Sphera)[^17]. </div>|
 | **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments[^18]. </div>|
@@ -262,3 +262,4 @@ This repository is licensed under the **MIT License** for the source code and so
 [^8]: MapBiomas. MapBiomas Project - Collection [3] of the Annual Fire Scars in Brazil. https://brasil.mapbiomas.org/en/metodo-mapbiomas-fogo/ (2025).
 [^9]: IPCC. 2006. 2006 IPCC Guidelines for National Greenhouse  as Inventories. Volume 4 Agriculture, Forestry and Other Land Use. https://www.ipcc-nggip.iges.or.jp/public/2019rf/vol4.html (2006).
 [^10]: IPCC. 2019 Refinement to the 2006 IPCC Guidelines for National Greenhouse  as Inventories. Volume 4 Agriculture, Forestry and Other Land Use. https://www.ipcc-nggip.iges.or.jp/public/2019rf/vol4.html (2019).
+[^11]: Scherer, L. et al. Biodiversity Impact Assessment Considering Land Use Intensities and Fragmentation. Environ. Sci. Technol. 57, 19612–19623 (2023). https://doi.org/10.1021/acs.est.3c04191
