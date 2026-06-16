@@ -2,7 +2,7 @@
 
 ## Overview
 <p align="justify">
-This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an **Attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
+This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an **attributional Life Cycle Assessment (LCA)** framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
 </p>
 
 <p align="justify">
@@ -17,9 +17,9 @@ Code Repository (GitHub): Serves as the central platform for methodological tran
 
 Reproducibility Dataset (Zenodo): Functions as the core package for workflow validation. It provides an optimised, lightweight subset—including tabular databases, shapefiles, intermediate outputs, and specific raster layers—designed to fully execute and verify the pipeline for a default reference year (2019) and a single selected municipality.
 
-Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitations or restrictive licensing types, which are necessary to obtain the full comprehensive results of the study, are detailed further below. Specific instructions for accessing and obtaining these files are provided in the description section of each dataset.
+Comprehensive Core Dataset: Datasets omitted from Zenodo due to storage limitations or restrictive licensing types, which are necessary to obtain the full comprehensive results of the study, as detailed further below. Specific instructions for accessing and obtaining these files are provided in the description section of each dataset.
 
-To fully replicate the analysis or run the scripts, you must combine the R code with the data cores hosted on Zenodo. 
+To fully replicate the analysis or run the scripts, users must combine the R code with the data cores hosted on Zenodo. 
 </div>
 ---
 
@@ -127,16 +127,16 @@ graph LR
 
 ```
 ## Data Dictionary: Input Files (`input_data/`)
-[cite_start]*Note: All Excel (.xlsx) files contain embedded metadata sheets/legends detailing their specific contents[cite: 204]. For plain-text and spatial formats, descriptions are detailed below[cite: 205].*
+*Note: All Excel files (.xlsx) contain embedded metadata sheets/legends detailing their specific contents. Description for plain-text and spatial formats are detailed below*
 
 | File Identifier | File Name / Path | Description & Source |
 | :--- | :--- | :--- |
 | **Input 1** | `trase_soy_supply_chain.xlsx` | <div align="justify"> Annual soy market volumes (2004–2022), origin municipalities, export ports, destination countries, FOB prices, and land use demand. Adapted from Trase [^1].</div> |
 | **Input 2** | `nd2_nd3_spatial_units.xlsx` |Geographic coordinates of export and import ports[^2]. |
-| **Input 3** | `soy_maize_double_cropping.xlsx` |<div align="justify">  Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate double-cropping magnitude. Sourced from IBGE-SIDRA[^3]. </div>|
+| **Input 3** | `soy_maize_double_cropping.xlsx` |<div align="justify">  Soy and maize harvest data by Brazilian municipality (2004–2022) to estimate the magnitude of double-cropping. Sourced from IBGE-SIDRA[^3]. </div>|
 | **Input 4** | `brazil_municipal_exports_2025.csv` | <div align="justify"> International trade data (1997–2025) for SH4 codes (2304, 1201, 1507, 1208) to allocate commodities to supply chains. Sourced from IBGE-COMEX [^4].</div> |
 | **Input 5** | `destination_countries_id.xlsx` | <div align="justify"> Identification data for destination countries used for dataframe linkage [^5].</div>|
-| **Input 6** | `brazil_crushing.xlsx` | <div align="justify"> Monthly domestic soy commodity commercial balance per municipality (1998–2024). Sourced from ABIOVE [^6]. </div>|
+| **Input 6** | `brazil_crushing.xlsx` | <div align="justify"> Monthly commercial balance of domestic soy commodity per municipality (1998–2024). Sourced from ABIOVE [^6]. </div>|
 | **Input 7** | `soy_oil_and_meal_prices.xlsx` | <div align="justify"> Economic values and trade volumes for soy cake and oil (2022) used for economic allocation. Sourced from ABIOVE[^6].</div> |
 | **Input 8** | `shp/br_municipalities_2021/br_municipalities_2021.shp` |<div align="justify"> Polygon vector layer of Brazilian municipalities for spatial identification [^7]. </div>|
 | **Input 9** | `raster/raster1/ecological_zone_BR.tif` | <div align="justify"> IUCN ecological zones raster clipped for Brazil, mapped to IPCC carbon/biomass stocks [^8].</div> |
@@ -146,21 +146,21 @@ graph LR
 | **Input 13** |<div align="justify">  `land_use_types.xlsx` | IPCC parameters for calculating carbon stock changes across land-use types and ecological zones[^12].</div> |
 | **Input 14** |<div align="justify">  `eco_municipalities.shp` | Spatial intersection vector layer mapping municipal boundaries against ecoregions to downscale biodiversity CFs[^13][^14].</div> |
 | **Input 15** |<div align="justify">  `cf_biodiversity_loss_luluc.xlsx` | Biodiversity loss Characterization Factors (CFs) for habitat transformation and occupation from Scherer et al. (2023)[^15]. </div>|
-| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming/processing stages compiled from 22 scientific articles (2011–2023)[^16].</div> |
-| **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilizers/soil amendments (IPCC) and fossil fuel combustion (Sphera)[^17]. </div>|
-| **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and Carbon content in fertilizer products and soil amendments[^18]. </div>|
+| **Input 16** |<div align="justify">  `lci_soy_production.xlsx` | LCA foreground activity data for farming and processing stages compiled from 22 scientific articles (2011–2023)[^16].</div> |
+| **Input 17** |<div align="justify">  `on_field_emission_factors.xlsx` | Emission factors for fertilisers and soil amendments [^18], and fossil fuel combustion (Sphera)[^17]. </div>|
+| **Input 18** |<div align="justify">  `n_and_c_content.xlsx` | Nitrogen and carbon content in fertilisers and soil amendments[^18]. </div>|
 | **Input 19** |<div align="justify">  `domestic_distance.xlsx` | Freight distances from origin to export port calculated via QGIS OpenRouteService (ORS)[^19]. </div>|
 | **Input 20** |<div align="justify">  `international_maritime_distance.xlsx`| Maritime shipping routes calculated via QGIS Least Cost Path algorithm with navigable constraints[^20].</div> |
 | **Input 22** |<div align="justify">  `international_overland_distance.xlsx`| International overland trade transit distances calculated via QGIS ORS[^21]. </div>|
-| **Input 23** |<div align="justify">  `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterization factors for biodiversity loss linked to emissions[^22].</div> |
-| **Input 24** |<div align="justify">  `ecoinvent_unit_processes.xlsx` | Ecoinvent v3.10 unit process indicators (SimaPro). *Values anonymized to `1` for licensing compliance*[^23].</div> |
+| **Input 23** |<div align="justify">  `cf_biodiversity_loss_emissions_luluc.xlsx`| LC-Impact (v1.2) characterisation factors for biodiversity loss linked to emissions[^22].</div> |
+| **Input 24** |<div align="justify">  `ecoinvent_unit_processes.xlsx` | Univt process indicators from Ecoinvent v3.10, modelling by SimaPro (https://simapro.com/). *Values anonymised to `1` for licensing compliance*[^23].</div> |
 
 ---
 
 ## Data Dictionary: Output Files (`output_data/`)
 
 ### Output 1: `trase_db_imputed_expanded.parquet`
-Imputed Trase database expanded with double-cropping practices and individualized soy commodity market splits.
+Imputed Trase database expanded with double-cropping practices and individualised breakdowns of soy commodity market.
 * **Location/Routing:** `export_port_code`, `export_port_name_mo` (reassigned ports for logical transoceanic shipping) , `port_municipality_code`, `municipality_code`, `import_country_name`, `import_port_name`.
 * **Socio-Economic & Logistics:** `fob`, `exporter_name`, `importer_name`, `transport_type`.
 * **Agricultural Dynamics:** `soy_eq`, `land_use`, `soy_yield`, `double_cropping_share`.
@@ -172,11 +172,11 @@ Mapped municipal areas distributed by IUCN ecological zone type.
 *`municipality_code`, `eco_zone`, `area_eco_zone`.
 
 ### Output 3: `l_cover_area_full.parquet` 
-Municipal land cover shifts over a 3-year prior window relative to the analysis year.
+Changes in municipal land cover over a 3-year window prior to the year of analysis.
 * `cov0` (Land cover 3 years prior), `cov1` (Current land cover), `burnt` (Binary wildfire event: 1=Yes, 0=No), `npixel`, `csoc_md` (Soil organic carbon delta), `area`, `municipality_code`, `year`.
 
 ### Output 4: `sLULUC_em.parquet`
-Uncertainty simulation iterations computing Land-Use Change derived emissions.
+Uncertainty simulation iterations for computing emissions derived from Land-Use Change.
 * Emissions: `CO2e_soc` (from SOC changes), `CO2e_bmb` (above-ground biomass carbon changes), `CH4e`, `N2Oe`, `NOxe` (from biomass burning during clearing).
 
 ---
@@ -218,7 +218,7 @@ The pipeline relies on the following key libraries, each serving a specific role
 
 ### Data Processing and Imputation Rules
 <p align="justify">
-The data pipeline includes cleaning, filtering, data frame merging, spatial cropping, and uncertainty parameter simulation[cite: 9]. [cite_start]Missing data points within the source datasets were handled using strict imputation rules:
+The data pipeline includes cleaning, filtering, merging data frames, spatial cropping, and simulating parameter uncertainty. Missing data points within the source datasets were handled using strict imputation rules:
 </p>
     
 * **Continuous Numeric Variables:** Imputed using weighted mean values.
@@ -226,22 +226,22 @@ The data pipeline includes cleaning, filtering, data frame merging, spatial crop
 
 ### Memory Optimization & Staged Calculations
 <p align="justify">
-Due to computational RAM limitations during big-data spatial processing, calculations are executed in chronological stages[cite: 22]. [cite_start]Intermediate files are cached and subsequently used as inputs to compile the final outputs.
+Due to computational RAM limitations during big-data spatial processing, calculations are executed in chronological stages. Intermediate files are cached and subsequently used as inputs to compile the final outputs.
 </p>
 
 ### Code Verification Mode (Quick Run)
 <p align="justify">
-[cite_start]To facilitate rapid testing and code verification by external users, a built-in filter option models data for a single municipality and a specific calendar year[cite: 23]. [cite_start]The fully processed dataset, however, is available within the `output_data/` folder[cite: 24].
+To facilitate rapid testing and code verification by external users, a built-in filter option models data for a single municipality and a specific calendar year. The fully processed dataset, however, is available within the `output_data/`.
 </p>
 
 ### Proprietary Data Compliance (Ecoinvent)
 <p align="justify">
-* [cite_start]**Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes[cite: 98]. [cite_start]Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`[cite: 99]. [cite_start]Users must consult the original source to apply the exact values[cite: 99].
+* **Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):** Impact indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes. Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`. Users sould refer to the original source to apply the exact values.
 </p>
 
 ## Supplementary Data Tables (Stored in Zenodo)
 <p align="justify">
-[cite_start]*Note: Any additional Excel files uploaded to the main Zenodo repository alongside this project code are supplementary to the manuscript text[cite: 2]. [cite_start]Every supplementary Excel file includes a dedicated internal sheet detailing variable definitions, units, and methodological context[cite: 204].*
+*Note: Any additional Excel files uploaded to the main Zenodo repository alongside this project code are supplementary to the manuscript text. Every supplementary Excel file includes a dedicated internal sheet detailing the variable definitions, units, and methodological context.*
 </p>
 
 ## Contact / Author
