@@ -255,3 +255,4 @@ This repository is licensed under the **MIT License** for the source code and so
 [^1]: Lathuillière, M. J., Suavet, C., Biddle, H., Su, N., Prada Moro, Y., Carvalho, T., & Ribeiro, V. (2022). Brazil soy supply chain (2004-2022) (Version 2.6) [Data set]. Trase. https://doi.org/10.48650/DCE3-JJ97
 [^2]: SEARATES platform. https://www.searates.com/es/maritime
 [^3]: IBGE-SIDRA. Tabela 1612: Área plantada, área colhida, quantidade produzida, rendimento médio e valor da produção das lavouras temporárias. Sistema IBGE de Recuperação Automática. Instituto Brasileiro de Geografia e Estatística. https://sidra.ibge.gov.br/tabela/1612 (2024).
+[^4]: MDIC-Comex Stat. Estatísticas de Comércio Exterior em Dados Abertos — Ministério do Desenvolvimento, Indústria, Comércio e Serviços. Exportação por Municípios do exportador/importador (e SH4). https://www.gov.br/mdic/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta (2024).
