@@ -7,9 +7,10 @@
 <details>
   <summary><b>► Click to expand the affiliations</b></summary>
   <br>
-  <sup>1</sup> <i>Department of Environmental Sciences, University of Excellence, Country.</i><br>
-  <sup>2</sup> <i>Center for Global Trade and Sustainability, Research Institute, Country.</i><br>
-  <sup>*</sup> <i>Corresponding author: jane.doe@university.edu</i>
+  <sup>1</sup> *Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.*
+  <sup>2</sup> *Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.*
+  <sup>3</sup> *Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.*
+  *<sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*
 </details>
 
 ## Overview
