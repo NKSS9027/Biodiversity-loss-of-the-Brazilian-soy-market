@@ -249,9 +249,6 @@ To facilitate rapid testing and code verification by external users, a built-in 
 * <b>Note on Input_File 24 (`ecoinvent_unit_processes.xlsx`):</b> Impact indicators derived from Ecoinvent v3.10 (modeled in SimaPro) are used in the unit processes. Because Ecoinvent is a proprietary, paid database, original values in this open-source file have been replaced with a placeholder value of `1`. Users sould refer to the original source to apply the exact values.
 </p>
 
-## Contact / Author
-nelsiso@upv.edu.es
-
 ---
 ## License
 This repository is licensed under the **MIT License** for the source code and software scripts, and the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** for the datasets and metadata structures.
