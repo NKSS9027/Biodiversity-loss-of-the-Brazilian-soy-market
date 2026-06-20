@@ -7,10 +7,16 @@
 <details>
   <summary><b>► Click to expand the affiliations</b></summary>
   <br>
-  <sup>1</sup> *Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.*
-  <sup>2</sup> *Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.*
-  <sup>3</sup> *Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.*
-  *<sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*
+  <sup>1</sup> <i>Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.</i>
+  <sup>2</sup> <i>Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.</i>
+  <sup>3</sup> <i>Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.</i>
+  *<sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*</i>
+</details>
+
+<details>
+  <summary>► <b>Click to expand affiliations</b></summary>
+  <br>
+  <sup>1</sup> <i>Department of Environmental Sciences...</i>
 </details>
 
 ## Overview
