@@ -1,9 +1,9 @@
 # Biodiversity Loss Footprint of the Brazilian Soy Supply Chain
 
-**Jane Doe**<sup>1*</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0002-1825-0097) &emsp; **John Smith**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0003-4567-8901)
+**Nelson K. Sinisterra-Solís**<sup>1*</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0002-8428-9205) &emsp; **Neus Sanjuan**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-9413-0268); **Neus Escobar**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-7644-8790)
 
 <sup>1</sup> *Department of Environmental Sciences, University of Excellence, Country.* <sup>2</sup> *Center for Global Trade and Sustainability, Research Institute, Country.* <sup>*</sup> *Corresponding author: jane.doe@university.edu*
-https://orcid.org/0000-0002-8428-9205
+
 ## Overview
 <p align="justify">
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an <b>attributional Life Cycle Assessment (LCA)</b> framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
