@@ -4,6 +4,15 @@
 
 <sup>1</sup> *Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.* <sup>2</sup> *Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.* <sup>3</sup> *Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.*<sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*
 
+<details>
+  <summary><b>🔍 View Affiliations & Contact Information</b></summary>
+  <br>
+  <sup>1</sup> <i>Department of Environmental Sciences, University of Excellence, Country.</i><br>
+  <sup>2</sup> <i>Center for Global Trade and Sustainability, Research Institute, Country.</i><br>
+  <sup>*</sup> <i>Corresponding author: jane.doe@university.edu</i>
+</details>
+
+
 ## Overview
 <p align="justify">
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an <b>attributional Life Cycle Assessment (LCA)</b> framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
