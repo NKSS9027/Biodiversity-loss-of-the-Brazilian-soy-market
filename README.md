@@ -1,4 +1,8 @@
 # Biodiversity Loss Footprint of the Brazilian Soy Supply Chain
+
+**Jane Doe**<sup>1*</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0002-1825-0097) &emsp; **John Smith**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0003-4567-8901)
+
+<sup>1</sup> *Department of Environmental Sciences, University of Excellence, Country.* <sup>2</sup> *Center for Global Trade and Sustainability, Research Institute, Country.* <sup>*</sup> *Corresponding author: jane.doe@university.edu*
 https://orcid.org/0000-0002-8428-9205
 ## Overview
 <p align="justify">
