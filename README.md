@@ -2,7 +2,7 @@
 
 **Nelson K. Sinisterra-Solís**<sup>1*</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0002-8428-9205) &emsp; **Neus Sanjuan**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-9413-0268); **Neus Escobar**<sup>2</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-7644-8790)
 
-<sup>1</sup> *Department of Environmental Sciences, University of Excellence, Country.* <sup>2</sup> *Center for Global Trade and Sustainability, Research Institute, Country.* <sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*
+<sup>1</sup> *Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.* <sup>2</sup> *Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.* <sup>2</sup> *Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.*<sup>*</sup> *Corresponding author: nelsiso@upv.edu.es*
 
 ## Overview
 <p align="justify">
