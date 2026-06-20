@@ -1,5 +1,5 @@
 # Biodiversity Loss Footprint of the Brazilian Soy Supply Chain
-
+https://orcid.org/0000-0002-8428-9205
 ## Overview
 <p align="justify">
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an <b>attributional Life Cycle Assessment (LCA)</b> framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
