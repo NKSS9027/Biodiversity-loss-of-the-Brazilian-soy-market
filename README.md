@@ -22,6 +22,29 @@ This repository contains the R implementation and data architecture for estimati
 <b>This repository serves as the comprehensive supplementary material for the associated scientific publication [xxxx]</b>
 </p>
 
+## Supplementary Data
+The spatial data layers (`Input_data`) and the model's baseline structures (`Output_data`) required to run this simulation are too heavy for GitHub and are hosted as Material Suplementario in Zenodo.
+
+You can download the data packages directly from the Zenodo Data Repository: [https://doi.org/PEGA_AQUÍ_EL_DOI_DE_LOS_DATOS](https://doi.org/PEGA_AQUÍ_EL_DOI_DE_LOS_DATOS).
+
+## Data Availability and Computational Reproducibility Framework
+
+Due to the multi-terabyte scale of this high-resolution geospatial Life Cycle Assessment (LCA) spanning nearly two decades (2004–2022), the complete analytical infrastructure cannot be hosted within a single repository. To align with open science paradigms and ensure rigorous computational reproducibility without storage bottlenecks, we implemented a **decoupled hybrid data-sharing architecture** structured across three interconnected pillars:
+
+1. **The Manuscript**: Establishes the theoretical, mathematical, and methodological foundations of the LCA model, cross-referencing the immutable Digital Object Identifiers (DOIs) of the computational pipeline.
+2. **The Codebase (GitHub / Zenodo Software Archive)**: Acts as the centralized repository for methodological transparency. It hosts all version-controlled R scripts, custom spatial optimization functions, dependency tracking documentation, and the primary RStudio project architecture (`.Rproj`). 
+   * **Permanent Archive**: [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.[CÓDIGO]-blue.svg)](https://doi.org/10.5281/zenodo.[CÓDIGO])
+3. **The Validation Dataset (Zenodo Data Archive)**: Functions as a benchmarking package specifically curated for workflow verification. To circumvent storage constraints, it provides an optimized, lightweight data core—comprising tabular databases, vector shapefiles, and localized raster layers—engineered to fully execute and validate the computational pipeline for a baseline reference year (2019) and a single reference municipality.
+   * **Data Repository**: [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.[DATOS]-green.svg)](https://doi.org/10.5281/zenodo.[DATOS])
+
+***
+
+> 💡 **Protocol for Full-Scale Replication & Extended Data Access**
+> Full-scale, multi-terabyte datasets omitted from the Zenodo validation repository due to storage boundaries or proprietary licensing conditions are thoroughly cataloged within the dataset documentation. Step-by-step protocols to source, compile, and ingest these comprehensive external core layers into the local `/Input_data` directory are detailed directly in the Zenodo dataset interface description.
+>
+> **Execution Workflow**: To replicate the analysis, clone the codebase, download the validation data bundles from Zenodo, extract them into their respective `/Input_data` and `/Output_data` directories within the project root, and initialize the master pipeline via `BSY-SCH.Rproj`.
+
+
 ## Data Availability and Reproducibility Framework
 <div align="justify">
 Due to the multi-terabyte size of the high-resolution geospatial LCA and the corresponding datasets (spanning 2004–2022), the complete analytical infrastructure exceeds the standard storage limits of platforms like GitHub and Zenodo. To ensure open science, transparency, and computational reproducibility, we implemented a decoupled hybrid data-sharing architecture consisting of:
