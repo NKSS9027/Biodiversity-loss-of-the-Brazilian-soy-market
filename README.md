@@ -2,17 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20787188.svg)](https://doi.org/10.5281/zenodo.20787188)
 
-**Nelson K. Sinisterra-Solís**<sup>1*</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0002-8428-9205); **Neus Sanjuan**<sup>1</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-9413-0268); **Neus Escobar**<sup>2,3</sup> [<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD" width="16" height="16">](https://orcid.org/0000-0001-7644-8790)
-
-<details>
-  <summary><b>► Click to expand the affiliations</b></summary>
-  <br>
-  <p><sup>1</sup> <i>Institute of Food Engineering FoodUPV, Universitat Politècnica de València (UPV), Camí de Vera s/n, 46022 València, Spain.</i></p>
-  <p><sup>2</sup> <i>Basque Centre for Climate Change (BC3), Parque Científicio de UPV/EHU, 48940 Leioa, Spain.</i></p>
-  <p><sup>3</sup> <i>Biodiversity and Natural Resources (BNR) Program, International Institute for Applied Systems Analysis (IIASA), Schlossplatz 1, 2361, Laxenburg, Austria.</i></p>
-  <p><sup>*</sup> <i>Corresponding author: <a href="mailto:nelsiso@upv.edu.es">nelsiso@upv.edu.es</a></i></p>
-</details>
-
 ## Overview
 <p align="justify">
 This repository contains the R implementation and data architecture for estimating the biodiversity loss associated with the international trade of Brazilian soy. Utilising an <b>attributional Life Cycle Assessment (LCA)</b> framework, the model couples supply chain activity data with spatially explicit layers of biophysical parameters and characterisation factors to quantify biodiversity degradation as a linear function of activities across the soy supply chain.
